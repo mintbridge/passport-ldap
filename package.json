@@ -1,0 +1,45 @@
+{
+  "name": "passport-ldap",
+  "version": "0.0.1",
+  "description": "LDAP authentication strategy for Passport.",
+  "author": {
+    "name": "Paul Dixon",
+    "email": "paul.dixon@mintbridge.co.uk",
+    "url": "http://www.mintbridge.co.uk/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mintbridge/passport-ldap.git"
+  },
+  "bugs": {
+    "url": "http://github.com/mintbridge/passport-ldap/issues"
+  },
+  "main": "./lib/passport-ldap",
+  "dependencies": {
+    "pkginfo": "0.2.x",
+    "ldapjs": "0.6.2"
+  },
+  "devDependencies": {
+    "vows": "0.6.x"
+  },
+  "scripts": {
+    "test": "NODE_PATH=lib node_modules/.bin/vows test/*-test.js"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "keywords": [
+    "passport",
+    "ldap",
+    "auth",
+    "authn",
+    "authentication",
+    "identity"
+  ]
+}
