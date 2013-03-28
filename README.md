@@ -24,14 +24,16 @@ The strategy requires a `verify` callback which accepts a user `profile` entry
 from the directory, and then calls the `done` callback supplying a `user`.
 
     passport.use(new LDAPStrategy({
-        url: 'ldap://0.0.0.0:1389',
-        base: 'o=example',
+        server: {
+          url: 'ldap://0.0.0.0:1389'
+        },
+        base: 'cn=users,dc=example,dc=local',
         search: {
           filter: '(&(l=Seattle)(email=*@foo.com))',
          }
       },
       function(profile, done) {
-        return done(null, profile);
+        return done(null, JSON.parse(profile));
       }
     ));
 
