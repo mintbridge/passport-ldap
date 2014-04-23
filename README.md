@@ -59,7 +59,7 @@ application:
 
 ## Examples
 
-For a complete, working example, refer to the [login example](https://github.com/mintbridge/passport-ldap/tree/master/examples/login).
+For a complete, working example, refer to the [passport example](/example.js).
 
 ## Tests
 
