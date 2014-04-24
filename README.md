@@ -23,6 +23,7 @@ given ldap server using the openldap protocol.
 The strategy requires a `verify` callback which accepts a user `profile` entry
 from the directory, and then calls the `done` callback supplying a `user`.
 
+```javascript
     passport.use(new LDAPStrategy({
         server: {
           url: 'ldap://0.0.0.0:1389'
@@ -36,7 +37,7 @@ from the directory, and then calls the `done` callback supplying a `user`.
         return done(null, JSON.parse(profile));
       }
     ));
-
+```
 #### Authenticate Requests
 
 Use `passport.authenticate()`, specifying the `'ldap'` strategy, to
@@ -44,7 +45,7 @@ authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
-
+```javascript
     app.get('/auth/login',
       passport.authenticate('facebook'));
 
@@ -54,12 +55,24 @@ application:
         failureRedirect: '/auth/login/'
       })
     );
-
+```
 #### Profile Fields
+
+| Option | Type | Default | Description |
+| ------------- | ------------- | ------------- | ------------- |
+| `server` | `Object` | `{url:''}` | Set the server URL in the format of `{url:'url.com:port'}` |
+| `usernameField` | `String` | `'user'` | Set the field to use for the `username` from the request sent |
+| `passwordField` | `String` | `'pwd'` | Set the field to use for the `password` from the request sent |
+| `base` | `String|Array` | `''` | Base DN to search against |
+| `search` | `Object` | `{filter:''}` | Object containing search options |
+| `authOnly` | `Boolean` | `false` | Whether to only get a successfull authentication with the server without returning the LDAP user |
+| `authMode` | `Number` | `1` | Used to differentiate between a Windows `0` or Unix LDAP server `1` |
+| `uidTag` | `String` | `uid` | Linux OpenLDAP `uid`, Sun Solaris `cn` |
+| `debug` | `Boolean` | `false` | Enable/disable debug messages |
 
 ## Examples
 
-For a complete, working example, refer to the [passport example](/example.js).
+For a complete working example refer to the [passport example](/example.js).
 
 ## Tests
 
