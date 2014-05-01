@@ -1,12 +1,29 @@
 {
   "name": "passport-ldap",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "LDAP authentication strategy for Passport.",
   "author": {
     "name": "Paul Dixon",
     "email": "paul.dixon@mintbridge.co.uk",
     "url": "http://www.mintbridge.co.uk/"
   },
+  "contributors": [
+    {
+      "name":"Matteo Brunati"
+    },
+    {
+      "name":"Jongwook Park",
+      "email":"niceilm@naver.com"
+    }
+    {
+      "name":"Paul Dixon",
+      "email":"paul.dixon@mintbridge.co.uk"
+    }
+    {
+      "name": "Enzo Martin",
+      "email": "enzo.martin@dice.se"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/mintbridge/passport-ldap.git"
