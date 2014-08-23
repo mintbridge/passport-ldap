@@ -1,6 +1,6 @@
 var express = require('express');
 var session = require('express-session');
-var LDAPStrategy = require('passport-lap').Strategy;
+var LDAPStrategy = require('passport-ldap').Strategy;
 
 // Windows LDAP
 var ldapConfig = {
